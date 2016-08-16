@@ -8,9 +8,18 @@ div {
     position: absolute;
     width: 500px;
     height: 500px;
+    background-image: url("plate.jpg");
+    background-size: 500px 500px;
 }
 
 #rightSide {
     left: 500px;
     border-left: 1px solid black;
+}
+
+body {
+    color: azure;
+    font-family: Avenir;
+    background-image: url("tableTexture.jpg");
+    background-size: 100%;
 }
