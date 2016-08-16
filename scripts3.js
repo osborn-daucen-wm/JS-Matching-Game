@@ -11,9 +11,10 @@ function generateCookies() {
         cookies.style.left = Math.random() * 400 + "px";
         leftSide.appendChild(cookies);
         count++;
+        leftSideImages = leftSide.cloneNode(true);
+        leftSideImages.removeChild(leftSideImages.lastChild);
+        rightSide.appendChild(leftSideImages);
     }
 }
-
-leftSideImages = theLeftSide.cloneNode(true);
 
 generateCookies();
