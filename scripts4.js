@@ -11,6 +11,18 @@ function generateCookies() {
         cookies.src = "cookie.png";
         cookies.style.top = Math.random() * 325 + 50 + "px";
         cookies.style.left = Math.random() * 325 + 50 + "px";
+        var degrees = Math.random() * 90;
+        if(navigator.userAgent.match("Chrome")){
+  cookies.style.WebkitTransform = "rotate("+degrees+"deg)";
+} else if(navigator.userAgent.match("Firefox")){
+  cookies.style.MozTransform = "rotate("+degrees+"deg)";
+} else if(navigator.userAgent.match("MSIE")){
+  cookies.style.msTransform = "rotate("+degrees+"deg)";
+} else if(navigator.userAgent.match("Opera")){
+  cookies.style.OTransform = "rotate("+degrees+"deg)";
+} else {
+  cookies.style.transform = "rotate("+degrees+"deg)";
+}
         leftSide.appendChild(cookies);
         count++;
         leftSideImages = leftSide.cloneNode(true);
